@@ -1,0 +1,10 @@
+.form__fieldset {
+    border-radius: 10px;
+}
+
+.form__legend {
+    background-color: rgb(202, 202, 202);
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}
