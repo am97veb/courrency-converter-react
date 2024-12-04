@@ -1,10 +1,14 @@
 import "./style.css";
 
-const Currency = () => (
-    <select className="form__field" >
-        <option>EUR</option>
-        <option>USD</option>
-        <option>CHF</option>
+const Currency = ({ currencyTable, currencyName, setCurrency }) => (
+    <select
+        value={currencyName}
+        onChange={(event) => setCurrency(event.target.value)}
+        className="form__field"
+    >
+        {currencyTable.map(currencyTable => (
+            <option key={currencyTable.id}>{currencyTable.name}</option>
+        ))}
     </select>
 );
 
