@@ -9,6 +9,7 @@ const Amount = ({amountValue, setAmount}) => (
         type="number"
         min="1"
         step="any"
+        placeholder="PLN"
         required
     />
 )
