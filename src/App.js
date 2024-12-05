@@ -10,7 +10,7 @@ import { useState } from "react";
 function App() {
   const [currencyName, setCurrency] = useState("EUR");
   const [amountValue, setAmount] = useState("");
-  const [resultValue, setResultValue] = useState("brak");
+  const [result, setResult] = useState(null);
 
   const currencyTable = [
     { id: 1, name: "EUR", value: 4.34 },
@@ -21,7 +21,7 @@ function App() {
   const filterNameOnTable = currencyTable.filter(({ name }) => name === currencyName);
   const currencyValue = filterNameOnTable.map(({ value }) => value);
 
-  const result = () => {
+  const calculation = () => {
     return amountValue / currencyValue
   };
 
@@ -51,14 +51,14 @@ function App() {
           }
         />
         <Result
-          resultValue={resultValue}
+          result={result}
           amountValue={amountValue}
           currencyName={currencyName}
         />
         <Button
+          calculation={calculation}
           result={result}
-          resultValue={resultValue}
-          setResultValue={setResultValue}
+          setResult={setResult}
           amountValue={amountValue}
           currencyName={currencyName}
         />

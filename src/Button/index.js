@@ -1,8 +1,8 @@
 import "./style.css";
 
-const Button = ({ setResultValue, amountValue, resultValue, result }) => (
+const Button = ({ setResult, amountValue, result, calculation }) => (
     <button
-        onClick={() => amountValue === "" || amountValue < 1 ? resultValue === "brak" : setResultValue(resultValue = result)}
+        onClick={() => amountValue === "" || amountValue < 1 ? result === "brak" : setResult(result = calculation)}
         className="form__button"
     >
         Przelicz
