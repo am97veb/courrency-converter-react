@@ -1,3 +1,21 @@
 .result {
     margin: 0 5px 0 10px;
 }
+
+.form__button {
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: rgb(45, 45, 45);
+}
+
+.form__button:active {
+    background-color: rgb(97, 97, 97);
+}

@@ -1,10 +1,5 @@
 import Form from "./Form";
-import Label from "./Label";
-import Amount from "./Amount";
-import Currency from "./Currency";
 import Result from "./Result";
-import Button from "./Button";
-import Fieldset from "./Fieldset";
 import { useState } from "react";
 
 function App() {
@@ -27,43 +22,24 @@ function App() {
 
   return (
 
-    <Form>
-      <Fieldset
-        fieldsetTitle="Kalkulator walut"
-      >
-        <Label
-          labelText="Waluta:"
-          formField={
-            <Currency
-              currencyTable={currencyTable}
-              currencyName={currencyName}
-              setCurrency={setCurrency}
-            />
-          }
-        />
-        <Label
-          labelText="Kwota do przeliczenia:"
-          formField={
-            <Amount
-              amountValue={amountValue}
-              setAmount={setAmount}
-            />
-          }
-        />
-        <Result
-          result={result}
-          amountValue={amountValue}
-          currencyName={currencyName}
-        />
-        <Button
-          calculation={calculation}
-          result={result}
+    <main>
+      <Form
+        setCurrency={setCurrency}
+        currencyTable={currencyTable}
+        currencyName={currencyName}
+        amountValue={amountValue}
+        setAmount={setAmount}
+        result={<Result
           setResult={setResult}
           amountValue={amountValue}
+          result={result}
           currencyName={currencyName}
-        />
-      </Fieldset>
-    </Form>
+          calculation={calculation}
+        />}
+      />
+  
+      
+    </main >
   )
 }
 
