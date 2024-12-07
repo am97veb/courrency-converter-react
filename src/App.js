@@ -21,7 +21,6 @@ function App() {
   };
 
   return (
-
     <main>
       <Form
         setCurrency={setCurrency}
@@ -37,8 +36,6 @@ function App() {
           calculation={calculation}
         />}
       />
-  
-      
     </main >
   )
 }
