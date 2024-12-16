@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Form = ({ setCurrency, currencyTable, currencyName, amountValue, setAmount, result }) => {
+const Form = ({ setCurrency, currencyTable, currencyName, amountValue, setAmount, result, clock }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -13,6 +13,7 @@ const Form = ({ setCurrency, currencyTable, currencyName, amountValue, setAmount
         >
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Kalkulator walut</legend>
+                {clock}
                 <p>
                     <label>
                         <span className="form__labelText">
