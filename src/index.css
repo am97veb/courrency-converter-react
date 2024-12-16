@@ -7,8 +7,6 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   background-image: url("/src/exchange-61usj3k0iaya8ys1.jpg");
   background-size: cover;
   font-family: "Raleway", sans-serif;
