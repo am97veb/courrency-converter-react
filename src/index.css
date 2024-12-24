@@ -6,6 +6,10 @@ html {
   box-sizing: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   background-image: url("/src/exchange-61usj3k0iaya8ys1.jpg");
   background-size: cover;

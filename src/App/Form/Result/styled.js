@@ -1,8 +1,10 @@
-.result {
-    margin: 0 5px 0 10px;
-}
+import styled from "styled-components";
 
-.form__button {
+export const ResultText = styled.span`
+    margin: 0 5px 0 10px;
+`;
+
+export const Button = styled.button`
     background-color: black;
     color: whitesmoke;
     border-radius: 10px;
@@ -10,13 +12,12 @@
     margin-top: 15px;
     font-weight: bold;
     border: none;
-    cursor: pointer;
-}
 
-.form__button:hover {
+    &:hover {
     background-color: rgb(45, 45, 45);
-}
+    }
 
-.form__button:active {
+    &:active {
     background-color: rgb(97, 97, 97);
-}
+    }
+`;

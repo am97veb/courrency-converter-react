@@ -1,22 +1,21 @@
-import "./style.css";
+import { Button, ResultText } from "./styled";
 
 const Result = ({ setResult, amountValue, result, currencyName, calculation }) => (
     <>
         < p >
             Wynik:
-            <span className="result">
+            <ResultText>
                 {result === null || amountValue < 0 ? result = "brak" : result.toFixed(2)}
-            </span>
+            </ResultText>
             <span>
                 {result > 0 ? currencyName : ""}
             </span>
         </p >
-        <button
+        <Button
             onClick={() => amountValue === "" || amountValue < 1 ? result === "brak" : setResult(result = calculation)}
-            className="form__button"
         >
             Przelicz
-        </button>
+        </Button>
     </>
 );
 

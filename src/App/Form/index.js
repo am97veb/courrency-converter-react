@@ -1,4 +1,4 @@
-import "./style.css";
+import { StyledForm, FormFieldset, FormLegend, LabelText, FormField } from "./styled";
 
 const Form = ({ setCurrency, currencyTable, currencyName, amountValue, setAmount, result, clock }) => {
 
@@ -7,38 +7,38 @@ const Form = ({ setCurrency, currencyTable, currencyName, amountValue, setAmount
     };
 
     return (
-        < form
+        <StyledForm
             onSubmit={onFormSubmit}
-            className="form"
         >
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">Kalkulator walut</legend>
+            <FormFieldset>
+                <FormLegend>
+                    Kalkulator walut
+                </FormLegend>
                 {clock}
                 <p>
                     <label>
-                        <span className="form__labelText">
+                        <LabelText>
                             Waluta:
-                        </span>
-                        <select
+                        </LabelText>
+                        <FormField
                             value={currencyName}
                             onChange={(event) => setCurrency(event.target.value)}
-                            className="form__field"
                         >
                             {currencyTable.map(currencyTable => (
                                 <option key={currencyTable.id}>{currencyTable.name}</option>
                             ))}
-                        </select>
+                        </FormField>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <span className="form__labelText">
+                        <LabelText>
                             Kwota do przeliczenia:
-                        </span>
-                        <input
+                        </LabelText>
+                        <FormField
                             value={amountValue}
                             onChange={(event) => setAmount(event.target.value)}
-                            className="form__field"
+                            as="input"
                             name="amount"
                             type="number"
                             min="1"
@@ -49,8 +49,8 @@ const Form = ({ setCurrency, currencyTable, currencyName, amountValue, setAmount
                     </label>
                 </p>
                 {result}
-            </fieldset>
-        </form >
+            </FormFieldset>
+        </StyledForm >
     );
 };
 
