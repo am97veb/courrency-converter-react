@@ -9,11 +9,14 @@ function App() {
   const [amountValue, setAmount] = useState("");
   const [result, setResult] = useState(null);
 
-  const filterNameOnTable = currencyTable.filter(({ name }) => name === currencyName);
-  const currencyValue = filterNameOnTable.map(({ value }) => value);
-
-  const calculation = () => {
-    return amountValue / currencyValue
+  const calculation = (currencyName, amountValue) => {
+    const filterNameOnTable = currencyTable.filter(({ name }) => name === currencyName);
+    const currencyValue = filterNameOnTable.map(({ value }) => value);
+    
+    setResult({
+      wynik: amountValue / currencyValue,
+      currencyName,
+    });
   };
 
   return (
@@ -25,9 +28,7 @@ function App() {
         currencyName={currencyName}
         amountValue={amountValue}
         setAmount={setAmount}
-
         result={<Result
-          setResult={setResult}
           amountValue={amountValue}
           result={result}
           currencyName={currencyName}

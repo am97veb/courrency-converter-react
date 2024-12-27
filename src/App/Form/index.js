@@ -1,6 +1,6 @@
 import { StyledForm, FormFieldset, FormLegend, LabelText, FormField } from "./styled";
 
-const Form = ({ setCurrency, currencyTable, currencyName, amountValue, setAmount, result, clock }) => {
+const Form = ({ currencyName, setCurrency, currencyTable, amountValue, setAmount, clock, result }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();

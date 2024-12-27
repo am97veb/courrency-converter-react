@@ -1,18 +1,27 @@
 import { Button, ResultText } from "./styled";
 
-const Result = ({ setResult, amountValue, result, currencyName, calculation }) => (
+const Result = ({ amountValue, result, currencyName, calculation }) => (
     <>
         < p >
             Wynik:
             <ResultText>
-                {result === null || amountValue < 0 ? result = "brak" : result.toFixed(2)}
+                {result === null || amountValue < 0
+                    ? "brak"
+                    :
+                    <>
+                        {result.wynik.toFixed(2)}&nbsp;
+                        {result.currencyName}
+                    </>
+                }
             </ResultText>
-            <span>
-                {result > 0 ? currencyName : ""}
-            </span>
+
         </p >
+
         <Button
-            onClick={() => amountValue === "" || amountValue < 1 ? result === "brak" : setResult(result = calculation)}
+            onClick={() => amountValue === "" || amountValue < 1
+                ? result === "brak"
+                : calculation(currencyName, amountValue)
+            }
         >
             Przelicz
         </Button>
