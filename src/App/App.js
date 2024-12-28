@@ -3,6 +3,7 @@ import Result from "./Form/Result";
 import Clock from "./Clock";
 import { currencyTable } from "./currencyTable";
 import { useState } from "react";
+import { GlobalStyles } from "./globalStyle";
 
 function App() {
   const [currencyName, setCurrency] = useState("EUR");
@@ -12,7 +13,7 @@ function App() {
   const calculation = (currencyName, amountValue) => {
     const filterNameOnTable = currencyTable.filter(({ name }) => name === currencyName);
     const currencyValue = filterNameOnTable.map(({ value }) => value);
-    
+
     setResult({
       wynik: amountValue / currencyValue,
       currencyName,
@@ -20,7 +21,9 @@ function App() {
   };
 
   return (
+
     <main>
+      <GlobalStyles />
       <Form
         clock={<Clock />}
         setCurrency={setCurrency}
@@ -35,7 +38,7 @@ function App() {
           calculation={calculation}
         />}
       />
-    </main >
+    </main>
   )
 }
 
