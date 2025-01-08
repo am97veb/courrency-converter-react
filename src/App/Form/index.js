@@ -1,6 +1,6 @@
 import { StyledForm, FormFieldset, FormLegend, LabelText, FormField } from "./styled";
 
-const Form = ({ currencyName, setCurrency, currencyTable, amountValue, setAmount, clock, result }) => {
+const Form = ({ currencyName, setCurrency, currencyTable, amountValue, setAmount, clock, result, currencyInformation }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -49,6 +49,7 @@ const Form = ({ currencyName, setCurrency, currencyTable, amountValue, setAmount
                     </label>
                 </p>
                 {result}
+                {currencyInformation}
             </FormFieldset>
         </StyledForm >
     );
