@@ -12,7 +12,7 @@ export const FormFieldset = styled.fieldset`
     border-radius: 10px;
     background-color: rgb(234, 233, 233);
     box-shadow: 5px 5px 14px -3px #000000;
-    padding: 0 30px 20px;
+    padding: 0 30px;
 `; 
 
 export const FormLegend = styled.legend`
