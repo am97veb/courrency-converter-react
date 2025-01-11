@@ -1,6 +1,6 @@
 import { StyledForm, FormFieldset, FormLegend, LabelText, FormField } from "./styled";
 
-const Form = ({ currencyName, setCurrency, currencyTable, amountValue, setAmount, clock, result, currencyInformation }) => {
+const Form = ({ currencyName, setCurrency, amountValue, setAmount, clock, result, currencyInformation, currencyData }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -15,6 +15,7 @@ const Form = ({ currencyName, setCurrency, currencyTable, amountValue, setAmount
                     Kalkulator walut
                 </FormLegend>
                 {clock}
+                
                 <p>
                     <label>
                         <LabelText>
@@ -24,8 +25,8 @@ const Form = ({ currencyName, setCurrency, currencyTable, amountValue, setAmount
                             value={currencyName}
                             onChange={(event) => setCurrency(event.target.value)}
                         >
-                            {currencyTable.map(currencyTable => (
-                                <option key={currencyTable.id}>{currencyTable.name}</option>
+                            {Object.keys(currencyData.data).map(currencyData => (
+                                <option key={currencyData}>{currencyData}</option>
                             ))}
                         </FormField>
                     </label>
