@@ -15,17 +15,19 @@ I used Visual Studio Code, Cascading Style Sheets and JavaScript to develop this
 
 ## ⚙ Technologies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses technologies implemented in Java Script ECMAScript 6.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses technologies implemented in Java Script ECMAScript 6. In addition, tools such as:
+
+- useState, useEffect and custom hooks,
+- setTimeout and setInterval,
+- Promises to download data from the external API.
 
 Technologies used to style the app include:
 
-- BEM convention
-- Normalize.css
-- Flexbox
-- Styled Components
-- ThemeProvider
-
-Promises was used to download data from the external API.
+- BEM convention,
+- Normalize.css,
+- Flexbox,
+- Styled Components,
+- ThemeProvider.
 
 ## 🧾 Available Scripts
 
