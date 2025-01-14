@@ -1,29 +1,34 @@
 # Currency Converter by Adrian Markefka
 
+## 🎬 Presentation
 ![Presentation](CCReactGif.gif)
 
-## Demo
+### 📄 Demo
 
 https://am97veb.github.io/currency-converter-react/
 
-## Description
+## 📖 Description
 
 Currency converter is a simple tool that allows you to convert PLN to one of three currencies: EUR, USD, CHF. Just enter the amount to be converted in the appropriate place and select the chosen currency from the list.
 
 I used Visual Studio Code, Cascading Style Sheets and JavaScript to develop this tool.
 
-## Technologies
+## ⚙ Technologies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses technologies implemented in Java Script ECMAScript 6.
 
-- Java Script ECMAScript 6
+Technologies used to style the app include:
 
-- CSS3:
-    - BEM convention
-    - Normalize.css
+- BEM convention
+- Normalize.css
+- Flexbox
+- Styled Components
+- ThemeProvider
 
+Promises was used to download data from the external API.
 
-## Available Scripts
+## 🧾 Available Scripts
+
 
 In the project directory, you can run:
 
