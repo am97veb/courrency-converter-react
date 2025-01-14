@@ -10,13 +10,13 @@ export const FormFieldset = styled.fieldset`
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background-color: rgb(234, 233, 233);
-    box-shadow: 5px 5px 14px -3px #000000;
+    background-color: ${({theme}) => theme.colors.mercury};
+    box-shadow: 5px 5px 14px -3px ${({theme}) => theme.colors.black};;
     padding: 0 30px;
 `; 
 
 export const FormLegend = styled.legend`
-    background-color: black;
+    background-color: ${({theme}) => theme.colors.black};;
     border-radius: 10px;
     padding: 10px;
     color: whitesmoke;
@@ -31,4 +31,16 @@ export const FormField = styled.select`
     border-radius: 10px;
     width: 200px;
     padding: 5px;
+`;
+
+export const LoadingText = styled.p`
+    text-align: center;
+    margin: 10%;
+    color:${({theme}) => theme.colors.tangaroa};
+`;
+
+export const ErrorText = styled(LoadingText)`
+    text-align: center;
+    margin: 10%;
+    color:${({theme}) => theme.colors.monza};
 `;

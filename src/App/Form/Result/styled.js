@@ -5,8 +5,8 @@ export const ResultText = styled.span`
 `;
 
 export const Button = styled.button`
-    background-color: black;
-    color: whitesmoke;
+    background-color: ${({theme}) => theme.colors.black};
+    color: ${({theme}) => theme.colors.wildSand};
     border-radius: 10px;
     padding: 10px;
     margin-top: 15px;
@@ -14,10 +14,10 @@ export const Button = styled.button`
     border: none;
 
     &:hover {
-    background-color: rgb(45, 45, 45);
+    background-color:${({theme}) => theme.colors.mineShaft};
     }
 
     &:active {
-    background-color: rgb(97, 97, 97);
+    background-color:${({theme}) => theme.colors.doveGray};
     }
 `;

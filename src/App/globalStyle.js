@@ -19,6 +19,6 @@ export const GlobalStyles = createGlobalStyle`
     background-size: cover;
     font-family: "Raleway", sans-serif;
     font-weight: bold;
-    color:black;
+    color:${({theme}) => theme.colors.black};
   }
 `;
