@@ -7,7 +7,7 @@ const useCurrencyDownload = () => {
         setTimeout(() => {
             (async () => {
                 try {
-                    const response = await fetch("currency-converter-react/currency.json");
+                    const response = await fetch("https://api.currencyapi.com/v3/latest?apikey=cur_live_QMcSRMkZ96pW8YABpy0Cnu6cfxFn560cnkq4pEpW&base_currency=PLN");
 
                     if (!response.ok) {
                         throw new Error(response.statusText);
