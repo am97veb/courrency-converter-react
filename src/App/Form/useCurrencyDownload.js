@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useCurrencyDownload = () => {
-    const [currencyData, setCurrencyData] = useState(undefined);
+    const [dataState, setDataState] = useState({status: "loading", currencyData: null});
 
     useEffect(() => {
         setTimeout(() => {
@@ -14,17 +14,18 @@ const useCurrencyDownload = () => {
                     };
 
                     const currency = await response.json();
-                    setCurrencyData(currency);
-                    // setDataState({loading: "success"});
+                    setDataState({status: "success", currencyData: currency});
+                    
                 } catch (error) {
+                    setDataState({status: "error"});
                     console.error("Ups...coś jest nie tak", error);
-                    // setDataState({loading: "error"})
+                    
                 };
             })();
         }, 1000);
     }, []);
-
-    return currencyData;
+    
+    return  dataState;
 };
-
+    
 export default useCurrencyDownload;
