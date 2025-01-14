@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { currencyDownload } from "./currencyDownload";
+import { fetchApiData } from "./fetchApiData";
+import { source } from "./source"; 
 
 const useCurrencyDownload = () => {
     const [dataState, setDataState] = useState({status: "loading", currencyData: null});
@@ -8,15 +9,9 @@ const useCurrencyDownload = () => {
         setTimeout(() => {
             (async () => {
                 try {
-                    const response = await currencyDownload;
-
-                    if (!response.ok) {
-                        throw new Error(response.statusText);
-                    };
-
-                    const currency = await response.json();
+                    const currency = await fetchApiData(source);
                     setDataState({status: "success", currencyData: currency});
-
+                    
                 } catch (error) {
                     setDataState({status: "error"});
                     console.error("Ups...coś jest nie tak", error);
