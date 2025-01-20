@@ -1,4 +1,5 @@
-import { StyledForm, FormFieldset, FormLegend, LabelText, FormField, LoadingText, ErrorText } from "./styled";
+import { StyledForm, FormFieldset, FormLegend, LabelText, FormField, LoadingText, ErrorText, Imagin } from "./styled";
+import loadingGif from "./loadingGif.gif";
 
 const Form = ({ currencyName, setCurrency, amountValue, setAmount, clock, result, currencyInformation, dataState }) => {
 
@@ -16,15 +17,19 @@ const Form = ({ currencyName, setCurrency, amountValue, setAmount, clock, result
         </FormLegend>
         {clock}
         {dataState.status === "loading"
-          ? 
-            (<LoadingText>Proszę czekać, trwa ładowanie danych⏳</LoadingText>)
+          ?
+          (<>
+            <LoadingText>Proszę czekać, trwa ładowanie danych⏳</LoadingText>
+            <Imagin src={loadingGif} alt="ikona ładowania" />
+          </>
+          )
           :
           dataState.status === "error"
-            ? 
-              (<ErrorText>Upsik... coś poszło nie tak😮
+            ?
+            (<ErrorText>Upsik... coś poszło nie tak😮
               <br></br>
               Przeładuj stronę lub spróbuj później.</ErrorText>)
-            : 
+            :
             (
               <>
                 <p>

@@ -39,6 +39,12 @@ export const LoadingText = styled.p`
     color:${({theme}) => theme.colors.tangaroa};
 `;
 
+export const Imagin = styled.img`
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+`;
+
 export const ErrorText = styled(LoadingText)`
     text-align: center;
     margin: 10%;
